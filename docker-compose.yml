@@ -1,0 +1,11 @@
+---
+version: '3'
+services:
+  web:
+    image: apache
+    build: ./
+    container_name: hello_web
+    restart: always
+    # Map external 8443 to 443 internally
+    ports:
+      - "8443:443"
